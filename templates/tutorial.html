@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="www.frebsite.nl" />
+        <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+        <title>University Lights</title>
+
+        <link rel="stylesheet" type="text/css" href="/static/loading.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/remote.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/toggles.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/mmenu.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/jquery.mmenu.all.css" />
+        <script type="text/javascript" src="/static/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="/static/jquery.mmenu.min.all.js"></script>
+        <script type="text/javascript" src="/static/moment.js"></script>
+        <script type="text/javascript" src="/static/combodate.js"></script>
+        <script type="text/javascript" src="/static/rpi.js"></script>
+    </head>
+    <body>
+        <nav id="menu">
+        <div id="app" class="wrapper">
+            <div class="top">
+                <br />
+                <p><strong>Power Controls</strong><br />
+                    These control power outlets in the house.</p>
+            </div>
+            <div class="bottom">
+                <ul id="alarms" class="List">
+                    <li>
+                        <input name="switch" id="ch1" type="checkbox" checked class="Toggle"/>
+                        <label id="escapingBallGch1" class="escapingBallGOffset">
+                            <div id="escapingBall_1" class="escapingBallG"> </div>
+                        </label>
+                        <a href="/about/">Channel 1</a>
+                        <ul> 
+                            <li>
+                                <input name="picker" id="ch1on" type="checkbox" class="Toggle"/>
+                                <label id="escapingBallGch1on" style="right: 23px;" class="escapingBallGOffset">
+                                    <div id="escapingBall_1" class="escapingBallG"> </div>
+                                </label>
+                                <label id='containerch1on' style="position:absolute;z-index:5;right:20px;bottom:0px;">
+                                    <input id='pickerch1on' data-format="HH:mm" data-template="HH : mm" name="datetime"/>
+                                </label>
+                                <span>
+                                    Turn On
+                                </span>
+                            </li>
+                            <li>
+                                <input name="picker" id="ch1off" type="checkbox" class="Toggle"/>
+                                <label id="escapingBallGch1off" style="right: 23px;" class="escapingBallGOffset">
+                                    <div id="escapingBall_1" class="escapingBallG"> </div>
+                                </label>
+                                <label id='containerch1off' style="position:absolute;z-index:5;right:20px;bottom:0px;">
+                                    <input id='pickerch1off' data-format="HH:mm" data-template="HH : mm" name="datetime"/>
+                                </label>
+                                <span>
+                                    Turn Off
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input name="switch" id="ch2" type="checkbox" checked class="Toggle"/>
+                        <label id="escapingBallGch2" class="escapingBallGOffset">
+                            <div id="escapingBall_1" class="escapingBallG"> </div>
+                        </label>
+                        <a href="/about/">Channel 2</a>
+                        <ul> 
+                            <li>
+                                <input name="picker" id="ch2on" type="checkbox" class="Toggle"/>
+                                <label id="escapingBallGch2on" style="right: 23px;" class="escapingBallGOffset">
+                                    <div id="escapingBall_1" class="escapingBallG"> </div>
+                                </label>
+                                <label id='containerch2on' style="position:absolute;z-index:5;right:20px;bottom:0px;">
+                                    <input id='pickerch2on' data-format="HH:mm" data-template="HH : mm" name="datetime"/>
+                                </label>
+                                <span>
+                                    Turn On
+                                </span>
+                            </li>
+                            <li>
+                                <input name="picker" id="ch2off" type="checkbox" class="Toggle"/>
+                                <label id="escapingBallGch2off" style="right: 23px;" class="escapingBallGOffset">
+                                    <div id="escapingBall_1" class="escapingBallG"> </div>
+                                </label>
+                                <label id='containerch2off' style="position:absolute;z-index:5;right:20px;bottom:0px;">
+                                    <input id='pickerch2off' data-format="HH:mm" data-template="HH : mm" name="datetime"/>
+                                </label>
+                                <span>
+                                    Turn Off
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input name="switch" id="ch3" type="checkbox" checked class="Toggle"/>
+                        <label id="escapingBallGch3" class="escapingBallGOffset">
+                            <div id="escapingBall_1" class="escapingBallG"> </div>
+                        </label>
+                        <a href="/about/">Channel 3</a>
+                        <ul> 
+                            <li>
+                                <input name="picker" id="ch3on" type="checkbox" class="Toggle"/>
+                                <label id="escapingBallGch3on" style="right: 23px;" class="escapingBallGOffset">
+                                    <div id="escapingBall_1" class="escapingBallG"> </div>
+                                </label>
+                                <label id='containerch3on' style="position:absolute;z-index:5;right:20px;bottom:0px;">
+                                    <input id='pickerch3on' data-format="HH:mm" data-template="HH : mm" name="datetime"/>
+                                </label>
+                                <span>
+                                    Turn On
+                                </span>
+                            </li>
+                            <li>
+                                <input name="picker" id="ch3off" type="checkbox" class="Toggle"/>
+                                <label id="escapingBallGch3off" style="right: 23px;" class="escapingBallGOffset">
+                                    <div id="escapingBall_1" class="escapingBallG"> </div>
+                                </label>
+                                <label id='containerch3off' style="position:absolute;z-index:5;right:20px;bottom:0px;">
+                                    <input id='pickerch3off' data-format="HH:mm" data-template="HH : mm" name="datetime"/>
+                                </label>
+                                <span>
+                                    Turn Off
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input name="switch" id="pir" type="checkbox" checked class="Toggle"/>
+                        <label id="escapingBallGpir" class="escapingBallGOffset">
+                            <div id="escapingBall_1" class="escapingBallG"> </div>
+                        </label>
+                        <a href="/about/">Motion Detector</a>
+                        <ul> 
+                            <li>
+                                <input name="picker" id="piron" type="checkbox" class="Toggle"/>
+                                <label id="escapingBallGpiron" style="right: 23px;" class="escapingBallGOffset">
+                                    <div id="escapingBall_1" class="escapingBallG"> </div>
+                                </label>
+                                <label id='containerpiron' style="position:absolute;z-index:5;right:20px;bottom:0px;">
+                                    <input id='pickerpiron' data-format="HH:mm" data-template="HH : mm" name="datetime"/>
+                                </label>
+                                <span>
+                                    Turn On
+                                </span>
+                            </li>
+                            <li>
+                                <input name="picker" id="piroff" type="checkbox" class="Toggle"/>
+                                <label id="escapingBallGpiroff" style="right: 23px;" class="escapingBallGOffset">
+                                    <div id="escapingBall_1" class="escapingBallG"> </div>
+                                </label>
+                                <label id='containerpiroff' style="position:absolute;z-index:5;right:20px;bottom:0px;">
+                                    <input id='pickerpiroff' data-format="HH:mm" data-template="HH : mm" name="datetime"/>
+                                </label>
+                                <span>
+                                    Turn Off
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/about/">Remote Control</a>
+                        <ul>
+                        	<button class="remote" style="background:url('/static/tv.png') no-repeat center center;background-size: contain;" type="button" onclick="sendSignal('tv');" ></button> 
+                        	<button class="remote" style="background:url('/static/volumeup.png') no-repeat center center;background-size: contain;" type="button" onclick="sendSignal('volumeup');" ></button> 
+                            <div style="height:25%;width:100%;margin:0 auto;display:block">
+                                <button class="remoteHorizontal" style="background:url('/static/soundoff.png') no-repeat center center;background-size: contain;" type="button" onclick="sendSignal('receiveroff');" ></button> 
+                                <button class="remoteHorizontal" style="background:url('/static/soundon.png') no-repeat center center;background-size: contain;" type="button" onclick="sendSignal('receiveron');" ></button>     
+                            </div>
+                        	<button class="remote" style="background:url('/static/volumedown.png') no-repeat center center;background-size: contain;" type="button" onclick="sendSignal('volumedown');" ></button> 
+                        </ul>
+                    </li>
+                </ul>
+                <!-- header info -->
+                <span class="Header">University Lights</span>
+            </div>
+        </div>
+
+        </nav>
+    </body>
+</html>
+
